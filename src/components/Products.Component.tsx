@@ -7,22 +7,12 @@ import { getProducts } from '@/utils/fetch';
 interface ProductPropsType {
   query?: string;
   currentPage: number;
+  sortValue?: string;
 }
 
 const pageSize = 8;
 
-async function getData(limit: string | number, skip: string | number, search: string = '') {
-  const res = await fetch(`https://dummyjson.com/products/search?q=${search}&limit=${limit}&skip=${skip}`);
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
-
-const ProductComponent = async ({ query, currentPage }: ProductPropsType) => {
+const ProductComponent = async ({ query, currentPage, sortValue }: ProductPropsType) => {
   const skip = (currentPage - 1) * pageSize;
   const { products, total } = await getProducts(pageSize, skip, query);
 

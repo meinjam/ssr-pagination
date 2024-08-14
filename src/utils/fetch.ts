@@ -1,7 +1,12 @@
 const BASE_URL: string | undefined = process.env.NEXT_PUBLIC_BASE_URL;
 
-export const getProducts = async (limit: string | number, skip: string | number, search: string = '') => {
-  const res = await fetch(`${BASE_URL}/products/search?q=${search}&limit=${limit}&skip=${skip}`);
+export const getProducts = async (
+  limit: string | number,
+  skip: string | number,
+  search: string = '',
+  sort: string = ''
+) => {
+  const res = await fetch(`${BASE_URL}/products/search?q=${search}&limit=${limit}&skip=${skip}&sort=${sort}`);
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary

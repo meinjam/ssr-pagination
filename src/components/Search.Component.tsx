@@ -25,7 +25,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
   }, 500);
 
   return (
-    <div className='flex justify-end mb-5'>
+    <div className='flex'>
       <div className='relative'>
         <label htmlFor='search' className='sr-only'>
           Search
