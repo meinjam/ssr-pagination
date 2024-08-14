@@ -41,7 +41,7 @@ const ProductDetails = ({ product }: any) => {
             min={1}
             max={product?.stock}
             defaultValue={1}
-            className='w-12 text-center rounded-md border-gray-300  shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+            className='w-12 text-center rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
           />
         </div>
         <div className='flex space-x-4 mb-6'>
