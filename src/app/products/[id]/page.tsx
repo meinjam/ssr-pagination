@@ -3,6 +3,18 @@ import { getProduct } from '@/utils/fetch';
 import ProductDetails from '@/components/product/ProductDetails.Component';
 import LoadingData from '@/components/LoadingData.Component';
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const product = await getProduct(params.id);
+
+  return {
+    title: product?.title,
+    description: product?.description,
+    openGraph: {
+      images: product?.thumbnail,
+    },
+  };
+}
+
 const page = async ({ params }: { params: { id: string } }) => {
   const product = await getProduct(params.id);
 

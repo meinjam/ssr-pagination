@@ -8,6 +8,12 @@ interface SearchParamsType {
   page?: string;
 }
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  return {
+    title: 'Product Listing Page',
+  };
+}
+
 const Products = ({ searchParams }: { searchParams: SearchParamsType }) => {
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
