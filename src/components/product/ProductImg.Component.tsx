@@ -13,7 +13,15 @@ const ProductImg = ({ images }: { images: string[] }) => {
   return (
     <div className='w-full md:w-1/2 px-4 mb-8'>
       <div className=''>
-        <Image src={mainImgSrc} width={500} height={500} className='block mx-auto' alt='product main image' />
+        <Image
+          src={mainImgSrc}
+          width={500}
+          height={500}
+          className='block mx-auto'
+          alt='product main image'
+          placeholder='blur'
+          blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN89R8AAtkB6zy+wn8AAAAASUVORK5CYII='
+        />
       </div>
       {images.length > 1 && (
         <div className='flex gap-4 py-4 justify-center overflow-x-auto'>
