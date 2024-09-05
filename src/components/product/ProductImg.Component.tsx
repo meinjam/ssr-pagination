@@ -12,12 +12,13 @@ const ProductImg = ({ images }: { images: string[] }) => {
 
   return (
     <div className='w-full md:w-1/2 px-4 mb-8'>
-      <div className=''>
+      <div className='relative aspect-square h-full max-h-[300px] md:max-h-[500px] w-full overflow-hidden'>
         <Image
           src={mainImgSrc}
-          width={500}
-          height={500}
-          className='block mx-auto'
+          fill
+          priority={true}
+          sizes='(min-width: 1024px) 66vw, 100vw'
+          className='h-full w-full object-contain'
           alt='product main image'
           placeholder='blur'
           blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN89R8AAtkB6zy+wn8AAAAASUVORK5CYII='
