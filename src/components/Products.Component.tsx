@@ -31,10 +31,13 @@ const ProductComponent = async ({ query, currentPage, sortValue }: ProductPropsT
                   height='220'
                   alt={product?.title}
                   className='block mx-auto'
+                  placeholder='blur'
+                  blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN89R8AAtkB6zy+wn8AAAAASUVORK5CYII='
                 />
                 <h1 className='truncate my-2'>{product?.title}</h1>
                 <div className=''>
                   <Link
+                    prefetch={true}
                     className='bg-primary text-white px-4 py-1 rounded inline-block'
                     href={`/products/${product?.id}`}
                   >

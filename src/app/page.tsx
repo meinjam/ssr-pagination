@@ -1,6 +1,4 @@
-import Image from 'next/image';
-
-export default function Home() {
+function Home() {
   return (
     <section>
       <div className='container'>
@@ -9,3 +7,5 @@ export default function Home() {
     </section>
   );
 }
+
+export default Home;

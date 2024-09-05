@@ -6,16 +6,20 @@ const Navbar = () => {
     <nav className='bg-primary text-white py-3'>
       <div className='container flex justify-between items-center'>
         <div>
-          <Link href='/' className='text-2xl'>
+          <Link href='/' prefetch={true} className='text-2xl'>
             Website
           </Link>
         </div>
         <menu className='flex items-center gap-x-10'>
           <li>
-            <Link href='/'>Home</Link>
+            <Link prefetch={true} href='/'>
+              Home
+            </Link>
           </li>
           <li>
-            <Link href='/products'>Products</Link>
+            <Link prefetch={true} href='/products'>
+              Products
+            </Link>
           </li>
         </menu>
       </div>

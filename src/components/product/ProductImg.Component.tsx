@@ -34,6 +34,8 @@ const ProductImg = ({ images }: { images: string[] }) => {
               alt={`Thumbnail ${i + 1}`}
               className='size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300'
               onClick={() => handleChangeSrc(image)}
+              placeholder='blur'
+              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN89R8AAtkB6zy+wn8AAAAASUVORK5CYII='
             />
           ))}
         </div>
